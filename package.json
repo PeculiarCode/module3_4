@@ -1,0 +1,17 @@
+{
+  "name": "myblog",
+  "private": true,
+  "scripts": {
+    "dev": "gridsome develop",
+    "explore": "gridsome explore",
+    "build": "gridsome build"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "element-ui": "^2.15.1",
+    "gridsome": "^0.7.0"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
