@@ -98,7 +98,7 @@ query {
 </static-query>
 
 <script>
-import { getMenuList } from '../api'
+import { getFollowerList } from '../api'
 export default {
   data() {
     return {
@@ -132,7 +132,7 @@ export default {
     handleSelect(...args) {
       const page = 1
       const per_page = 10
-      getMenuList(page, per_page).then(res => {
+      getFollowerList(page, per_page).then(res => {
         console.log(res)
       })
     }
