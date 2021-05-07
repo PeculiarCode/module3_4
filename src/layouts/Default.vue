@@ -130,11 +130,11 @@ export default {
       this.showProcess = !this.showProcess
     },
     handleSelect(...args) {
-      const page = 1
-      const per_page = 10
-      getFollowerList(page, per_page).then(res => {
-        console.log(res)
-      })
+      // const page = 1
+      // const per_page = 10
+      // getFollowerList(page, per_page).then(res => {
+      //   console.log(res)
+      // })
     }
   }
 }
@@ -176,7 +176,7 @@ body {
 }
 .desc {
   font-size: 1.25rem;
-  margin-bottom: 2rem;
+  margin: 20px auto;
   font-weight: 400;
   opacity: 0.7;
 }

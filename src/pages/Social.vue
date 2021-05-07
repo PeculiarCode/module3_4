@@ -90,7 +90,6 @@ export default {
           name: item.login
         }
       })
-      console.log(item)
     }
   }
 }
