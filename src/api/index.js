@@ -35,3 +35,25 @@ export const getBlog = (pageIndex, pageSize) => {
     }
   })
 }
+export const getOpen = (pageIndex, pageSize) => {
+  return request({
+    url: `/users/GitHub-Laziji/repos`,
+    method: 'GET',
+    params: {
+      page: pageIndex,
+      per_page: pageSize
+    }
+  })
+}
+export const getDetail = name => {
+  return request({
+    url: `repos/GitHub-Laziji/${name}`,
+    method: 'GET'
+  })
+}
+export const getRead = () => {
+  return request({
+    url: `/repos/GitHub-Laziji/GitHub-Laziji.github.io/contents/README.md`,
+    method: 'GET'
+  })
+}

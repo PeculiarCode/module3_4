@@ -3,8 +3,13 @@
     <div class="search">
       <el-input placeholder="请输入关键字" v-model="keyword"></el-input>
       <el-button icon="el-icon-search" circle @click="handleSearch"></el-button>
-      <el-button icon="el-icon-share" circle></el-button>
-      <el-button class="edit" icon="el-icon-edit" type="primary" round
+      <el-button icon="el-icon-share" circle @click="handleWrite"></el-button>
+      <el-button
+        class="edit"
+        icon="el-icon-edit"
+        type="primary"
+        round
+        @click="handleWrite"
         >写博客</el-button
       >
     </div>
@@ -34,6 +39,7 @@
 
 <script>
 import { getBlog } from '../api'
+import { errMsg } from '../utils'
 export default {
   metaInfo: {
     title: 'Blog'
@@ -53,6 +59,9 @@ export default {
     },
     async handleCurrent(e) {
       this.getList(e, this.pageSize)
+    },
+    handleWrite() {
+      errMsg()
     },
     handleSearch() {
       if (this.keyword != '') {
